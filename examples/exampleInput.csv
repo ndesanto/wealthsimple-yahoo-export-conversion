@@ -1,0 +1,6 @@
+Account Name,Account Type,Account Classification,Account Number,Symbol,Exchange,MIC,Name,Security Type,Quantity,Position Direction,Market Price,Market Price Currency,Book Value (CAD),Book Value Currency (CAD),Book Value (Market),Book Value Currency (Market),Market Value,Market Value Currency,Market Unrealized Returns,Market Unrealized Returns Currency
+TFSA,TFSA,Self-Directed,X,STO,TSX,XTSE,STOCK,EQUITY,7,LONG,300.44,CAD,1365.8,CAD,1365.8,CAD,4.339527,CAD,756,CAD
+TFSA,TFSA,Self-Directed,X,STT,TSX,XTSE,STOCK 2,EXCHANGE_TRADED_FUND,100,LONG,50.01,CAD,4870.13,CAD,4870.13,CAD,7800,CAD,5,CAD
+TFSA,TFSA,Self-Directed,X,GME,NYSE,XNYS,Gamestop Corporation (Class A),EQUITY,5000,LONG,23.5800,USD,177.53734375,CAD,129.9413378243130000000000,USD,117.8,USD,12.18243129,USD
+,,,,,,,,,,,,,,,,,,,,
+As of 2026-01-28 23:02 GMT-05:00,,,,,,,,,,,,,,,,,,,,

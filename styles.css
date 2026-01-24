@@ -1,0 +1,19 @@
+*{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+body{margin:0;background:#f2f0f0;color:#111}
+.container{max-width:900px;margin:40px auto;padding:24px;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,40,0.06)}
+h1{margin:0 0 16px;font-size:20px}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+input[type=file]{display:none}
+.btn{display:inline-block;padding:8px 12px;background:#9D61FF;color:#fff;border:none;border-radius:6px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.drop-zone{display:flex;justify-content:center;margin:0 auto;border:2px dashed #dfe6f5;padding:0px;text-align:center;color:#556;border-radius:8px;background:#fbfdff}
+.real-drop-zone{padding:35px;font-size:14px;cursor: pointer;}
+.message{margin-top:12px;color:#333}
+.table-wrap{margin-top:16px;overflow:auto; }
+table{width:100%;border-collapse:collapse;display: block; height: 250px; overflow: auto;}
+th,td{padding:8px;border:1px solid #f8f0ff;text-align:left;font-size:13px}
+th{background:#f8f0ff}
+.bottom-buttons{display:flex;gap:8px;justify-content:center;margin-top:16px;}
+button[disabled]{background:#dbc5ff;cursor:not-allowed;}
+#uploadBtn{display: flex;align-items: center;justify-content: center;}
+

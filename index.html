@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon/" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/" />
+  <link rel="manifest" href="favicon/" />
+  <meta name="google-adsense-account" content="ca-pub-1906901233572859">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WealthSimple to Yahoo Finance CSV Converter</title>
+
+</head>
+<body>
+  <div class="container">
+    <h1>WealthSimple to Yahoo Finance CSV Converter</h1>
+
+    <div class="controls">
+      <input type="file" id="fileInput" accept=".csv,text/csv" />
+    </div>
+
+    <button id="uploadBtn" class="drop-zone"><div id="dropZone" class="real-drop-zone">Drag and drop your CSV file or click to upload.</div></button>
+    <div class="bottom-buttons">
+        <button id="downloadBtn" class="btn" disabled>Download Result</button>
+        <button id="clearBtn" class="btn">Clear</button>
+    </div>
+
+    <div id="message" class="message"></div>
+    <h2>Input:</h2>
+    <div id="tableWrap" class="table-wrap"></div>
+
+    <textarea id="csvInput" class="csv-copy" style="width:100%; height:150px; margin-top:8px;"></textarea>
+    <button id="processBtn" class="btn" style="margin-top:8px;">Process Textbox Input</button> <br><br>
+    
+
+
+    <h2>Output:</h2>
+    <div id="tableWrapOutput" class="table-wrap"></div>
+
+    <textarea id="csvCopy" class="csv-copy" style="width:100%; height:150px; margin-top:8px;" readonly></textarea>
+
+
+    
+
+      <div class="">
+        <br><hr/><br>
+        <h2>Instructions:</h2>
+        <ul>
+            <h3 style="display: inline;">Step 1:</h3> Export your transaction history from WealthSimple as a CSV file.<br><br>
+            <div style="margin-left:20px;">
+            <h4 style="display: inline;">Step 1a:</h4> Go to the user-settings Document page<br><br>
+            <img src="images/ws-step1.jpg" alt="WealthSimple Export" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+
+            <h4 style="display: inline;">Step 1b:</h4> Click on "Request Documents" and choose `Holdings Report`.<br>
+             note: I suggest selecting 1 account at a time as I ignore the account column in the CSV.<br><br>
+            <img src="images/ws-step2.jpg" alt="WealthSimple Export Options" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+            </div>
+            
+        </ul>
+        <ul>
+            <h3 style="display: inline;">Step 2:</h3> Upload the CSV file using the "Drag and drop" area above or by clicking to select the file or by copy and pasting the CSV into the input field and clicking "Process Textbox Input"<br>
+        </ul>
+        <ul>
+            <h3 style="display: inline;">Step 3:</h3> Once processed, click the "Download Result" button to get your converted CSV file for Yahoo Finance.<br>
+        </ul>
+
+        <ul>
+            <h3 style="display: inline;">Step 4:</h3> Import the downloaded CSV file into your Yahoo Finance account.<br><br>
+            <div style="margin-left:20px;">
+                <img src="images/ws-step3.jpg" alt="Yahoo Finance Import" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+            </div>
+            <br><br>
+        </ul>
+        <hr/>
+        <ul>
+            There are some example files in the `examples` folder you can use to test the converter.<br><br>
+            <a href="examples/exampleinput.csv">Example WealthSimple Input CSV</a><br>
+            <textarea style="width:100%; height:150px; margin-top:8px;" readonly>Account Name,Account Type,Account Classification,Account Number,Symbol,Exchange,MIC,Name,Security Type,Quantity,Position Direction,Market Price,Market Price Currency,Book Value (CAD),Book Value Currency (CAD),Book Value (Market),Book Value Currency (Market),Market Value,Market Value Currency,Market Unrealized Returns,Market Unrealized Returns Currency
+TFSA,TFSA,Self-Directed,X,STO,TSX,XTSE,STOCK,EQUITY,7,LONG,300.44,CAD,1365.8,CAD,1365.8,CAD,4.339527,CAD,756,CAD
+TFSA,TFSA,Self-Directed,X,STT,TSX,XTSE,STOCK 2,EXCHANGE_TRADED_FUND,100,LONG,50.01,CAD,4870.13,CAD,4870.13,CAD,7800,CAD,5,CAD
+TFSA,TFSA,Self-Directed,X,GME,NYSE,XNYS,Gamestop Corporation (Class A),EQUITY,5000,LONG,23.5800,USD,177.53734375,CAD,129.9413378243130000000000,USD,117.8,USD,12.18243129,USD
+,,,,,,,,,,,,,,,,,,,,
+As of 2026-01-28 23:02 GMT-05:00,,,,,,,,,,,,,,,,,,,,
+                </textarea><br><br>
+            <a href="examples/exampleoutput.csv">Example Yahoo Finance Output CSV</a><br>
+               <textarea style="width:100%; height:150px; margin-top:8px;" readonly>Symbol,Current Price,Trade Date,Purchase Price,Quantity
+STO.TO,300.4400,20260129,192.44,7
+STT.TO,50.0100,20260129,49.96,100
+GME,23.5800,20260129,23.577599999999997,5000
+                </textarea><br><br>
+        </ul>
+          <div>
+    <a class="inner-link nav-inner-text" target="_blank" href="https://github.com/ndesanto/wealthsimple-yahoo-export-conversion">github</a>
+  </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
