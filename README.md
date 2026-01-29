@@ -1,23 +1,8 @@
-CSV Importer
-=============
+# (Unofficial) Wealthsimple to Yahoo export conversion tool
 
-Simple static webpage that lets you import a CSV file and view it as a table.
-
-Usage
------
-
-- Open `index.html` in a browser, or run a local server from the project folder:
-
-```bash
-# Python 3
-python -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
-
-- Click the "Choose CSV" button or drag & drop a CSV into the drop zone.
-- The first row is treated as a header row and used as table headings.
-
-Notes
------
-- The included parser handles quoted fields and escaped quotes (`""`).
-- For large CSVs or advanced parsing features, consider using an existing parser like PapaParse.
+- the code and the html and the css was whipped together very quickly with no regard for code-quality standards :)
+- I made this tool for myself because Wealthsimple recently added a CSV export tool and I wanted to track my stocks on Yahoo finance without manually adding/updating everytime i make a change in WS
+- I am not an expert in Stocks or anything, my portfolio is pretty simple so if i'm missing any usecases that could be useful let me know
+- I did some ticker-conversions for canadian stocks/ what wealthsimple states they accept
+- all the instructions on how to use the tool are on the page
+- let me know if theres any features that are missing! and/or you want to contribute!
