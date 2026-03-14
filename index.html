@@ -9,16 +9,40 @@
   <link rel="manifest" href="favicon/" />
   <meta name="google-adsense-account" content="ca-pub-1906901233572859">
   <meta charset="utf-8">
-  <meta name="description" content="Convert WealthSimple CSV exports to Yahoo Finance compatible CSV format">
-
+  <meta name="description" content="Free tool to convert WealthSimple CSV exports to Yahoo Finance compatible format. Easily transfer your investment portfolio data from WealthSimple to Yahoo Finance for portfolio tracking and analysis.">
+  <meta name="keywords" content="WealthSimple, Yahoo Finance, CSV converter, portfolio transfer, investment tracking">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WealthSimple to Yahoo Finance CSV Converter</title>
+  <title>WealthSimple to Yahoo Finance CSV Converter - Free Online Tool</title>
 
 </head>
 <body>
+  <nav class="navbar">
+    <a href="https://desanto.ca">← Back to Home</a>
+  </nav>
+  
   <div class="container">
-    <a href="https://desanto.ca">Home</a> <br><br>
     <h1>WealthSimple to Yahoo Finance CSV Converter</h1>
+    <p class="tagline">Seamlessly transfer your investment portfolio from WealthSimple to Yahoo Finance</p>
+    <section class="content-intro">
+      <h2>About This Tool</h2>
+      <p>
+        This free online converter helps you seamlessly transfer your investment portfolio data from WealthSimple to Yahoo Finance. 
+        If you're looking to track your holdings across multiple platforms or consolidate your investment management tools, this 
+        converter makes the process simple and straightforward. No installation required—just upload your WealthSimple CSV export 
+        and get a compatible Yahoo Finance format in seconds.
+      </p>
+    </section>
+
+    <section class="why-section">
+      <h2>Why Transfer from WealthSimple to Yahoo Finance?</h2>
+      <ul>
+        <li><strong>Multi-Platform Tracking:</strong> Many investors use multiple brokers and platforms. Yahoo Finance allows you to track all your investments in one unified dashboard.</li>
+        <li><strong>Advanced Analytics:</strong> Yahoo Finance offers detailed portfolio analytics, performance tracking, and historical data analysis that complements your WealthSimple account.</li>
+        <li><strong>Real-Time Updates:</strong> Monitor your investments across platforms simultaneously and get comprehensive market insights.</li>
+        <li><strong>Cost Basis Tracking:</strong> Maintain accurate records of your purchase prices and quantities for tax reporting purposes.</li>
+        <li><strong>Portfolio Diversification Monitoring:</strong> Analyze your entire investment portfolio allocation across all your accounts.</li>
+      </ul>
+    </section>
 
     <div class="controls">
       <input type="file" id="fileInput" accept=".csv,text/csv" />
@@ -31,76 +55,231 @@
     </div>
 
     <div id="message" class="message"></div>
-    <h2>Input:</h2>
+    <h3>Input CSV Preview:</h3>
     <div id="tableWrap" class="table-wrap"></div>
 
-    <textarea id="csvInput" class="csv-copy" style="width:100%; height:150px; margin-top:8px;"></textarea>
+    <textarea id="csvInput" class="csv-copy" placeholder="Paste your WealthSimple CSV data here (alternative to file upload)" style="width:100%; height:150px; margin-top:8px;"></textarea>
     <button id="processBtn" class="btn" style="margin-top:8px;">Process Textbox Input</button> <br><br>
     
-
-
-    <h2>Output:</h2>
+    <h3>Output CSV (Yahoo Finance Format):</h3>
     <div id="tableWrapOutput" class="table-wrap"></div>
 
-    <textarea id="csvCopy" class="csv-copy" style="width:100%; height:150px; margin-top:8px;" readonly></textarea>
+    <textarea id="csvCopy" class="csv-copy" placeholder="Your converted Yahoo Finance CSV will appear here" style="width:100%; height:150px; margin-top:8px;" readonly></textarea>
 
+    <section class="how-to-section">
+      <h2>How to Use This Converter - Step-by-Step Guide</h2>
+      
+      <div class="steps">
+        <div class="step">
+          <h3>Step 1: Export Your WealthSimple Holdings</h3>
+          <p>Log into your WealthSimple account and navigate to the document download section to export your Holdings Report as a CSV file.</p>
+          <h4>Detailed Instructions:</h4>
+          <ol>
+            <li>Log in to your WealthSimple account</li>
+            <li>Go to Account Settings or the Documents page</li>
+            <li>Click on "Request Documents" or "Download Documents"</li>
+            <li>Select "Holdings Report" from the available document types</li>
+            <li>Choose your account (note: process one account at a time for best results)</li>
+            <li>Download the CSV file to your computer</li>
+          </ol>
+          <img src="images/ws-step1.jpg" alt="WealthSimple Export" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+        </div>
 
-    
+        <div class="step">
+          <h3>Step 2: Upload or Paste Your CSV Data</h3>
+          <p>You have two options to input your WealthSimple CSV:</p>
+          <ul>
+            <li><strong>Option A (Easiest):</strong> Click the upload area above or drag and drop your CSV file directly</li>
+            <li><strong>Option B:</strong> Copy the CSV content, paste it into the textarea above, and click "Process Textbox Input"</li>
+          </ul>
+          <img src="images/ws-step2.jpg" alt="WealthSimple Export Options" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+        </div>
 
-      <div class="">
-        <br><hr/><br>
-        <h2>Instructions:</h2>
-        <ul>
-            <h3 style="display: inline;">Step 1:</h3> Export your transaction history from WealthSimple as a CSV file.<br><br>
-            <div style="margin-left:20px;">
-            <h4 style="display: inline;">Step 1a:</h4> Go to the user-settings Document page<br><br>
-            <img src="images/ws-step1.jpg" alt="WealthSimple Export" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+        <div class="step">
+          <h3>Step 3: Review and Download</h3>
+          <p>The tool automatically converts your WealthSimple CSV to Yahoo Finance format. Check the output preview to ensure all your holdings appear correctly, then click "Download Result" to save your converted file.</p>
+        </div>
 
-            <h4 style="display: inline;">Step 1b:</h4> Click on "Request Documents" and choose `Holdings Report`.<br>
-             note: I suggest selecting 1 account at a time as I ignore the account column in the CSV.<br><br>
-            <img src="images/ws-step2.jpg" alt="WealthSimple Export Options" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
-            </div>
-            
-        </ul>
-        <ul>
-            <h3 style="display: inline;">Step 2:</h3> Upload the CSV file using the "Drag and drop" area above or by clicking to select the file or by copy and pasting the CSV into the input field and clicking "Process Textbox Input"<br>
-        </ul>
-        <ul>
-            <h3 style="display: inline;">Step 3:</h3> Once processed, click the "Download Result" button to get your converted CSV file for Yahoo Finance.<br>
-        </ul>
+        <div class="step">
+          <h3>Step 4: Import into Yahoo Finance</h3>
+          <p>Log into your Yahoo Finance account and use the import function to add your holdings:</p>
+          <ol>
+            <li>Go to My Stocks or Portfolio section in Yahoo Finance</li>
+            <li>Look for the "Import" or "Add Holdings" option</li>
+            <li>Upload your converted CSV file</li>
+            <li>Verify that all holdings are imported correctly</li>
+          </ol>
+          <img src="images/ws-step3.jpg" alt="Yahoo Finance Import" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
+        </div>
+      </div>
+    </section>
 
-        <ul>
-            <h3 style="display: inline;">Step 4:</h3> Import the downloaded CSV file into your Yahoo Finance account.<br><br>
-            <div style="margin-left:20px;">
-                <img src="images/ws-step3.jpg" alt="Yahoo Finance Import" style="max-width:100%; height:auto; border-radius:6px; box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);"><br><br>
-            </div>
-            <br><br>
-        </ul>
-        <hr/>
-        <ul>
-            There are some example files in the `examples` folder you can use to test the converter.<br><br>
-            <a href="examples/exampleinput.csv">Example WealthSimple Input CSV</a><br>
-            <textarea style="width:100%; height:150px; margin-top:8px;" readonly>Account Name,Account Type,Account Classification,Account Number,Symbol,Exchange,MIC,Name,Security Type,Quantity,Position Direction,Market Price,Market Price Currency,Book Value (CAD),Book Value Currency (CAD),Book Value (Market),Book Value Currency (Market),Market Value,Market Value Currency,Market Unrealized Returns,Market Unrealized Returns Currency
+    <section class="examples-section">
+      <h2>Example Files</h2>
+      <p>To help you understand the conversion format, we've provided example files showing before and after data:</p>
+      
+      <div class="example-box">
+        <h3>Example WealthSimple Input Format</h3>
+        <p>This is what your exported WealthSimple CSV looks like:</p>
+        <textarea style="width:100%; height:200px; margin-top:8px;" readonly>Account Name,Account Type,Account Classification,Account Number,Symbol,Exchange,MIC,Name,Security Type,Quantity,Position Direction,Market Price,Market Price Currency,Book Value (CAD),Book Value Currency (CAD),Book Value (Market),Book Value Currency (Market),Market Value,Market Value Currency,Market Unrealized Returns,Market Unrealized Returns Currency
 TFSA,TFSA,Self-Directed,X,STO,TSX,XTSE,STOCK,EQUITY,7,LONG,300.44,CAD,1365.8,CAD,1365.8,CAD,4.339527,CAD,756,CAD
 TFSA,TFSA,Self-Directed,X,STT,TSX,XTSE,STOCK 2,EXCHANGE_TRADED_FUND,100,LONG,50.01,CAD,4870.13,CAD,4870.13,CAD,7800,CAD,5,CAD
 TFSA,TFSA,Self-Directed,X,GME,NYSE,XNYS,Gamestop Corporation (Class A),EQUITY,5000,LONG,23.5800,USD,177.53734375,CAD,129.9413378243130000000000,USD,117.8,USD,12.18243129,USD
 ,,,,,,,,,,,,,,,,,,,,
-As of 2026-01-28 23:02 GMT-05:00,,,,,,,,,,,,,,,,,,,,
-                </textarea><br><br>
-            <a href="examples/exampleoutput.csv">Example Yahoo Finance Output CSV</a><br>
-               <textarea style="width:100%; height:150px; margin-top:8px;" readonly>Symbol,Current Price,Trade Date,Purchase Price,Quantity
+As of 2026-01-28 23:02 GMT-05:00,,,,,,,,,,,,,,,,,,,,</textarea>
+      </div>
+
+      <div class="example-box">
+        <h3>Example Yahoo Finance Output Format</h3>
+        <p>This is the converted format that Yahoo Finance will accept:</p>
+        <textarea style="width:100%; height:150px; margin-top:8px;" readonly>Symbol,Current Price,Trade Date,Purchase Price,Quantity
 STO.TO,300.4400,20260129,192.44,7
 STT.TO,50.0100,20260129,49.96,100
-GME,23.5800,20260129,23.577599999999997,5000
-                </textarea><br><br>
+GME,23.5800,20260129,23.577599999999997,5000</textarea>
+        <p><a href="examples/exampleinput.csv" download>Download Example Input CSV</a> | <a href="examples/exampleoutput.csv" download>Download Example Output CSV</a></p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <h3>Is my data safe? Does the converter store my information?</h3>
+        <p>
+          No, your data is <strong>completely safe</strong>. This is a client-side converter that runs entirely in your web browser. 
+          Your WealthSimple CSV data is processed locally on your computer and is <strong>never sent to any server</strong>. There are 
+          no accounts to create, no data collection, and no tracking. Once you close your browser, nothing is stored.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why do I need to convert the CSV file? Can't I just import WealthSimple's format directly?</h3>
+        <p>
+          Unfortunately, WealthSimple and Yahoo Finance use different CSV formats. WealthSimple includes more detailed information 
+          (account types, market prices, unrealized returns, etc.) that Yahoo Finance doesn't need or can't parse. This converter 
+          extracts the essential data—symbol, quantity, price, and trade date—and reformats it into Yahoo Finance's expected structure.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What about Canadian stocks? How are ticker symbols handled?</h3>
+        <p>
+          Canadian stocks listed on the TSX are automatically converted to include the .TO suffix, which is how Yahoo Finance 
+          recognizes Canadian stocks. For example, "STO" becomes "STO.TO". US stocks maintain their regular ticker symbols 
+          (like "GME" for GameStop).
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I process multiple accounts at once?</h3>
+        <p>
+          <strong>Recommended approach:</strong> Process one account at a time. Export your Holdings Report for each account separately 
+          and convert them individually. This ensures accuracy and makes it easier to organize your holdings in Yahoo Finance. Mix 
+          the converted CSV files if you want to import everything at once.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What if the converter doesn't work or shows an error?</h3>
+        <p>
+          The converter is optimized for standard WealthSimple Holdings Report exports. If you encounter an error:
+        </p>
+        <ul>
+          <li>Ensure you're uploading a valid CSV file (not XLSX or PDF)</li>
+          <li>Check that the file hasn't been manually edited or corrupted</li>
+          <li>Make sure you're using the Holdings Report format, not a transaction statement</li>
+          <li>Try copying and pasting the CSV content directly into the textbox instead of uploading</li>
         </ul>
-          <div>
-        <a style="margin:0 auto; float: right; " target="_blank" href="https://github.com/ndesanto/wealthsimple-yahoo-export-conversion">github link</a>
-  </div><br>
-    </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will this converter affect my WealthSimple account?</h3>
+        <p>
+          No. This tool is completely separate from WealthSimple. It simply reads the CSV file you provide and converts the format. 
+          It doesn't connect to or modify your WealthSimple account in any way.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is there a cost to use this tool?</h3>
+        <p>
+          No, this tool is completely <strong>free to use</strong>. There are no hidden fees, subscriptions, or premium versions.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How often is the converter updated?</h3>
+        <p>
+          The converter is maintained to work with current WealthSimple and Yahoo Finance formats. As these platforms update their 
+          CSV structure, the converter is updated accordingly. Check the GitHub repository for the latest version.
+        </p>
+      </div>
+    </section>
+
+    <section class="technical-section">
+      <h2>How It Works - Technical Overview</h2>
+      <p>
+        This converter transforms WealthSimple's detailed Holdings Report format into Yahoo Finance's simpler portfolio format. 
+        Here's what happens:
+      </p>
+      <ul>
+        <li><strong>Symbol Conversion:</strong> TSX-listed stocks get the .TO suffix added automatically</li>
+        <li><strong>Data Extraction:</strong> Symbol, quantity, and price information are extracted from each holding</li>
+        <li><strong>Date Formatting:</strong> Trade dates are formatted as YYYYMMDD, the format Yahoo Finance expects</li>
+        <li><strong>Currency Handling:</strong> Prices are maintained in their original currency as reported by WealthSimple</li>
+        <li><strong>Format Generation:</strong> The output is formatted as a standard CSV with headers that Yahoo Finance recognizes</li>
+      </ul>
+      <p>Visit the <a href="https://github.com/ndesanto/wealthsimple-yahoo-export-conversion" target="_blank">GitHub repository</a> 
+      to see the source code or contribute improvements.</p>
+    </section>
+
+    <section class="disclaimer-section">
+      <h2>Disclaimer & Important Notes</h2>
+      <p>
+        <strong>No Financial Advice:</strong> This tool is provided as-is for informational purposes only. It is not financial advice, 
+        and we do not provide investment recommendations. Always verify your data after conversion before relying on it for financial decisions.
+      </p>
+      <p>
+        <strong>Data Accuracy:</strong> While we strive to ensure accurate conversions, users are responsible for verifying that all 
+        holdings are correctly transferred. Some edge cases may require manual adjustment.
+      </p>
+      <p>
+        <strong>No Warranty:</strong> This tool is provided without any warranty. Use it at your own risk. The creators are not 
+        responsible for any errors, data loss, or financial consequences resulting from its use.
+      </p>
+    </section>
+
+    <section class="footer-section">
+      <p style="text-align:center;">
+        <strong>Have suggestions or found a bug?</strong><br>
+        <a href="https://github.com/ndesanto/wealthsimple-yahoo-export-conversion" target="_blank">Contribute on GitHub</a> or 
+        reach out with feedback.
+      </p>
+      <div class="footer-links">
+        <a target="_blank" href="https://github.com/ndesanto/wealthsimple-yahoo-export-conversion">View Source Code</a>
+        <span>•</span>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </section>
   </div>
 
 
   <script type="module" src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "WealthSimple to Yahoo Finance CSV Converter",
+    "description": "Free tool to convert WealthSimple CSV exports to Yahoo Finance compatible format. Easily transfer your investment portfolio data.",
+    "url": "https://desanto.ca/wealthsimple-yahoo-export-conversion",
+    "applicationCategory": "FinanceApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    }
+  }
+  </script>
 </body>
 </html>
